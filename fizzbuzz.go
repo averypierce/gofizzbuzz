@@ -22,15 +22,26 @@ func main() {
 		fizzRange = r
 	}
 	
-	for  i:= 1 ; i < fizzRange ; i++ {
+	slice := fizzArray(fizzRange)
+	fmt.Print(slice)
+}
+
+func fizzArray(fizzRange int) []string {
+
+	var slice = make([]string,fizzRange)
+
+	for  i:= 0 ; i < fizzRange ; i++ {
+
 		if i % 3 == 0 && i % 5 == 0 {
-			fmt.Println("fizzbuzz")
+			slice[i] = "fizzbuzz"
 		} else if i % 3 == 0 {
-			fmt.Println("fizz")
+			slice[i] = "fizz"
 		} else if i % 5 == 0 {
-			fmt.Println("buzz")
+			slice[i] = "buzz"
 		} else {
-			fmt.Println(i)
+			slice[i] = strconv.Itoa(i)
 		}
 	}
+	
+	return slice
 }
