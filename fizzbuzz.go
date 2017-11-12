@@ -22,7 +22,7 @@ func main() {
 		fizzRange = r
 	}
 	
-	for  i:= 0; i < fizzRange ; i++ {
+	for  i:= 1 ; i < fizzRange ; i++ {
 		if i % 3 == 0 && i % 5 == 0 {
 			fmt.Println("fizzbuzz")
 		} else if i % 3 == 0 {
