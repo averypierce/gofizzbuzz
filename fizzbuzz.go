@@ -22,11 +22,11 @@ func main() {
 		fizzRange = r
 	}
 	
-	slice := fizzArray(fizzRange)
-	fmt.Print(slice)
+	slice := fizzBuzzSlice(fizzRange)
+	fmt.Println(slice)
 }
 
-func fizzArray(fizzRange int) []string {
+func fizzBuzzSlice(fizzRange int) []string {
 
 	var slice = make([]string,fizzRange)
 
